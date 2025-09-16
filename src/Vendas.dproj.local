@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/09/15 22:13:30.000.111,=C:\Sistema DiaERP\DiaAplicativo\Unit1.pas</Transaction>
+    <Transaction>2025/09/15 22:14:47.988,=C:\Sistema DiaERP\DiaAplicativo\Unit1.pas</Transaction>
+    <Transaction>2025/09/15 22:15:44.906,D:\sistema-de-vendas-delphi\src\view\unitPrincipal.dfm=C:\Sistema DiaERP\DiaAplicativo\Unit1.dfm</Transaction>
+    <Transaction>2025/09/15 22:15:44.906,D:\sistema-de-vendas-delphi\src\view\unitPrincipal.pas=C:\Sistema DiaERP\DiaAplicativo\Unit1.pas</Transaction>
+    <Transaction>2025/09/15 22:16:41.775,D:\sistema-de-vendas-delphi\src\Vendas.dproj=C:\Sistema DiaERP\DiaAplicativo\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
