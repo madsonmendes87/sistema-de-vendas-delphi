@@ -22,6 +22,7 @@ type
     ContasaReceber1: TMenuItem;
     Configuraes1: TMenuItem;
     NFCe1: TMenuItem;
+
   private
     { Private declarations }
   public
@@ -34,5 +35,6 @@ var
 implementation
 
 {$R *.dfm}
+
 
 end.
