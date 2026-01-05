@@ -1,0 +1,72 @@
+object DataModule1: TDataModule1
+  Height = 480
+  Width = 640
+  object qryCidadeCadastro: TFDQuery
+    Connection = dmConexao.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM CIDADES')
+    Left = 120
+    Top = 32
+    object qryCidadeCadastroID: TIntegerField
+      DisplayLabel = 'Codigo'
+      FieldName = 'ID'
+      Origin = 'ID'
+      Required = True
+    end
+    object qryCidadeCadastroNOME: TStringField
+      DisplayLabel = 'Nome'
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 60
+    end
+    object qryCidadeCadastroUF: TStringField
+      FieldName = 'UF'
+      Origin = 'UF'
+      Size = 2
+    end
+    object qryCidadeCadastroCODIGO_IBGE: TIntegerField
+      DisplayLabel = 'Codigo IBGE'
+      FieldName = 'CODIGO_IBGE'
+      Origin = 'CODIGO_IBGE'
+    end
+  end
+  object qryCidadeBusca: TFDQuery
+    Connection = dmConexao.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM CIDADES')
+    Left = 352
+    Top = 32
+    object qryCidadeBuscaID: TIntegerField
+      DisplayLabel = 'Codigo'
+      FieldName = 'ID'
+      Origin = 'ID'
+      Required = True
+    end
+    object qryCidadeBuscaNOME: TStringField
+      DisplayLabel = 'Nome'
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 60
+    end
+    object qryCidadeBuscaUF: TStringField
+      FieldName = 'UF'
+      Origin = 'UF'
+      Size = 2
+    end
+    object qryCidadeBuscaCODIGO_IBGE: TIntegerField
+      DisplayLabel = 'Codigo IBGE'
+      FieldName = 'CODIGO_IBGE'
+      Origin = 'CODIGO_IBGE'
+    end
+  end
+  object dsCidadeCadastro: TDataSource
+    DataSet = qryCidadeCadastro
+    Left = 240
+    Top = 24
+  end
+  object dsCidadeBusca: TDataSource
+    DataSet = qryCidadeBusca
+    Left = 456
+    Top = 24
+  end
+end
