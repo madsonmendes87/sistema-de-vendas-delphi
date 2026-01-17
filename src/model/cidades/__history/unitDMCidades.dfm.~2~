@@ -1,4 +1,4 @@
-object dmCidades: TdmCidades
+object DataModule1: TDataModule1
   Height = 480
   Width = 640
   object qryCidadeCadastro: TFDQuery
@@ -31,7 +31,6 @@ object dmCidades: TdmCidades
     end
   end
   object qryCidadeBusca: TFDQuery
-    Active = True
     Connection = dmConexao.FDConnection1
     SQL.Strings = (
       'SELECT * FROM CIDADES')

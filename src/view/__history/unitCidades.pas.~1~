@@ -1,0 +1,27 @@
+unit unitCidades;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.StdCtrls;
+
+type
+  TformCidades = class(TForm)
+    editSearch: TEdit;
+    gridCidades: TDBGrid;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  formCidades: TformCidades;
+
+implementation
+
+{$R *.dfm}
+
+end.

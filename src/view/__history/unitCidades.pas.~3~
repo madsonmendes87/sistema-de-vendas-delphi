@@ -1,0 +1,47 @@
+unit unitCidades;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TformCidades = class(TForm)
+    editSearch: TEdit;
+    gridCidades: TDBGrid;
+    labNomeCidade: TLabel;
+    btnCadastrar: TBitBtn;
+    btnAlterar: TBitBtn;
+    btnUtilizar: TBitBtn;
+    btnFechar: TBitBtn;
+    procedure editSearchChange(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  formCidades: TformCidades;
+
+implementation
+
+{$R *.dfm}
+
+uses unitDMCidades;
+
+procedure TformCidades.editSearchChange(Sender: TObject);
+begin
+    with dmCidades.qryCidadeBusca do
+    begin
+        Close;
+        Filtered    :=False;
+        Filter      :='NOME LIKE' + UpperCase(QuotedStr('%'+editSearch.Text+'%'));
+        Filtered    :=True;
+        Open;
+    end;
+end;
+
+end.

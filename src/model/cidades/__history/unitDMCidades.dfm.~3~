@@ -31,7 +31,6 @@ object dmCidades: TdmCidades
     end
   end
   object qryCidadeBusca: TFDQuery
-    Active = True
     Connection = dmConexao.FDConnection1
     SQL.Strings = (
       'SELECT * FROM CIDADES')

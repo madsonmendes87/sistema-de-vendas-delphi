@@ -1,0 +1,71 @@
+unit unitCidades;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.StdCtrls, Vcl.Buttons;
+
+type
+  TformCidades = class(TForm)
+    editSearch: TEdit;
+    gridCidades: TDBGrid;
+    labNomeCidade: TLabel;
+    btnCadastrar: TBitBtn;
+    btnAlterar: TBitBtn;
+    btnUtilizar: TBitBtn;
+    btnFechar: TBitBtn;
+    procedure editSearchChange(Sender: TObject);
+    procedure btnCadastrarClick(Sender: TObject);
+    procedure btnAlterarClick(Sender: TObject);
+    procedure btnUtilizarClick(Sender: TObject);
+    procedure btnFecharClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  formCidades: TformCidades;
+
+implementation
+
+{$R *.dfm}
+
+uses unitDMCidades;
+
+procedure TformCidades.btnAlterarClick(Sender: TObject);
+begin
+    ShowMessage('Cliquei no botao Alterar');
+end;
+
+procedure TformCidades.btnCadastrarClick(Sender: TObject);
+begin
+    ShowMessage('Cliquei no botao Cadastrar');
+end;
+
+procedure TformCidades.btnFecharClick(Sender: TObject);
+begin
+    ShowMessage('Cliquei no botao Fechar');
+end;
+
+procedure TformCidades.btnUtilizarClick(Sender: TObject);
+begin
+    ShowMessage('Cliquei no botao Utilizar');
+end;
+
+procedure TformCidades.editSearchChange(Sender: TObject);
+begin
+    with dmCidades.qryCidadeBusca do
+    begin
+        Close;
+        Filtered    :=False;
+        Filter      :='NOME LIKE' + UpperCase(QuotedStr('%'+editSearch.Text+'%'));
+        Filtered    :=True;
+        Open;
+    end;
+end;
+
+end.

@@ -9,7 +9,7 @@ uses
   FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
-  TdmCidades = class(TDataModule)
+  TDataModule1 = class(TDataModule)
     qryCidadeCadastro: TFDQuery;
     qryCidadeBusca: TFDQuery;
     dsCidadeCadastro: TDataSource;
@@ -29,7 +29,7 @@ type
   end;
 
 var
-  dmCidades: TdmCidades;
+  DataModule1: TDataModule1;
 
 implementation
 

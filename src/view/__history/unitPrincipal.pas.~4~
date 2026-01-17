@@ -22,7 +22,6 @@ type
     ContasaReceber1: TMenuItem;
     Configuraes1: TMenuItem;
     NFCe1: TMenuItem;
-    procedure Cidades1Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -37,13 +36,5 @@ implementation
 
 {$R *.dfm}
 
-uses unitCidades;
-
-
-procedure TformPrincipal.Cidades1Click(Sender: TObject);
-begin
-    application.CreateForm(TformCidades, formCidades);
-    formCidades.ShowModal;
-end;
 
 end.
