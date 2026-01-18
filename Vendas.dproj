@@ -146,6 +146,10 @@
             <Form>formCidades</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="src\view\unitCadastrarCidades.pas">
+            <Form>formCadastrarCidades</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

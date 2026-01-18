@@ -42,13 +42,8 @@ begin
 end;
 
 procedure TformCidades.btnCadastrarClick(Sender: TObject);
-
-var
-    formCadastrarCidades: TformCadastrarCidades;
-
 begin
     ShowMessage('Cliquei no botao Cadastrar');
-
 end;
 
 procedure TformCidades.btnFecharClick(Sender: TObject);
