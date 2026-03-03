@@ -27,6 +27,7 @@ type
     dsComboUF: TDataSource;
     procedure btnGravarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure btnResetarUFClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,10 +48,14 @@ begin
     if(Trim(editNome.Text).IsEmpty)then
     begin
         editNome.SetFocus;
-        //raise Exception.Create('Campo nome está vazio');
         Application.MessageBox('Campo nome está vazio', 'Cadastrar Cidades',MB_OK + MB_ICONERROR);
         exit;
     end;
+end;
+
+procedure TformCadastrarCidades.btnResetarUFClick(Sender: TObject);
+begin
+    DBLookUF.KeyValue :=Null;
 end;
 
 procedure TformCadastrarCidades.FormShow(Sender: TObject);

@@ -44,16 +44,18 @@ object formCadastrarCidades: TformCadastrarCidades
   end
   object btnResetarUF: TSpeedButton
     Left = 103
-    Top = 158
-    Width = 23
-    Height = 22
+    Top = 157
+    Width = 18
+    Height = 23
+    Cursor = crHandPoint
     Caption = 'X'
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clRed
+    Font.Color = clBlack
     Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
+    OnClick = btnResetarUFClick
   end
   object editID: TEdit
     Left = 24
@@ -80,7 +82,7 @@ object formCadastrarCidades: TformCadastrarCidades
     TabOrder = 3
   end
   object DBLookUF: TDBLookupComboBox
-    Left = 24
+    Left = 32
     Top = 157
     Width = 73
     Height = 23
@@ -94,6 +96,7 @@ object formCadastrarCidades: TformCadastrarCidades
     Top = 213
     Width = 97
     Height = 44
+    Cursor = crHandPoint
     Caption = 'Gravar'
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
@@ -160,6 +163,7 @@ object formCadastrarCidades: TformCadastrarCidades
     Top = 213
     Width = 97
     Height = 44
+    Cursor = crHandPoint
     Caption = 'Cancelar'
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100

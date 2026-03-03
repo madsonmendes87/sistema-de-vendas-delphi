@@ -2,7 +2,7 @@ object dmCidades: TdmCidades
   Height = 480
   Width = 640
   object qryCidadeCadastro: TFDQuery
-    Connection = dmConexao.FDConnection1
+    Connection = dmConexao.Conexao
     SQL.Strings = (
       'SELECT * FROM CIDADES')
     Left = 120
@@ -32,7 +32,7 @@ object dmCidades: TdmCidades
   end
   object qryCidadeBusca: TFDQuery
     Active = True
-    Connection = dmConexao.FDConnection1
+    Connection = dmConexao.Conexao
     SQL.Strings = (
       'SELECT * FROM CIDADES')
     Left = 352
@@ -63,11 +63,11 @@ object dmCidades: TdmCidades
   object dsCidadeCadastro: TDataSource
     DataSet = qryCidadeCadastro
     Left = 240
-    Top = 24
+    Top = 32
   end
   object dsCidadeBusca: TDataSource
     DataSet = qryCidadeBusca
     Left = 456
-    Top = 24
+    Top = 32
   end
 end

@@ -19,6 +19,7 @@ object dmConexao: TdmConexao
     Top = 24
   end
   object FDPhysFBDriverLink1: TFDPhysFBDriverLink
+    VendorLib = 'C:\Program Files (x86)\Firebird\Firebird_5_0\fbclient.dll'
     Left = 320
     Top = 24
   end
