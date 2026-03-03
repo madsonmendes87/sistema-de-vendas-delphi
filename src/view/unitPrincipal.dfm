@@ -1,6 +1,7 @@
 object formPrincipal: TformPrincipal
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Sistema de Vendas'
   ClientHeight = 441
   ClientWidth = 624

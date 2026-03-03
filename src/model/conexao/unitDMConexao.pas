@@ -11,9 +11,10 @@ uses
 
 type
   TdmConexao = class(TDataModule)
-    FDConnection1: TFDConnection;
+    Conexao: TFDConnection;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     FDPhysFBDriverLink1: TFDPhysFBDriverLink;
+    FDTransacao: TFDTransaction;
   private
     { Private declarations }
   public

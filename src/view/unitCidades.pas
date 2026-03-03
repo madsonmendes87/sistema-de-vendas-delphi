@@ -34,7 +34,7 @@ implementation
 
 {$R *.dfm}
 
-uses unitDMCidades;
+uses unitDMCidades, unitCadastrarCidades;
 
 procedure TformCidades.btnAlterarClick(Sender: TObject);
 begin
@@ -47,7 +47,13 @@ var
     formCadastrarCidades: TformCadastrarCidades;
 
 begin
-    ShowMessage('Cliquei no botao Cadastrar');
+    formCadastrarCidades  :=TformCadastrarCidades.Create(nil);
+
+    try
+        formCadastrarCidades.ShowModal;
+    finally
+        FreeAndNil(formCadastrarCidades);
+    end;
 
 end;
 

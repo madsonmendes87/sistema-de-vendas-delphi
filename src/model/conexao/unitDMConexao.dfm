@@ -1,7 +1,7 @@
 object dmConexao: TdmConexao
   Height = 480
   Width = 640
-  object FDConnection1: TFDConnection
+  object Conexao: TFDConnection
     Params.Strings = (
       'Database=D:\sistema-de-vendas-delphi\Dados\DADOS.FDB'
       'User_Name=sysdba'
@@ -9,6 +9,7 @@ object dmConexao: TdmConexao
       'DriverID=FB')
     Connected = True
     LoginPrompt = False
+    Transaction = FDTransacao
     Left = 64
     Top = 24
   end
@@ -20,5 +21,10 @@ object dmConexao: TdmConexao
   object FDPhysFBDriverLink1: TFDPhysFBDriverLink
     Left = 320
     Top = 24
+  end
+  object FDTransacao: TFDTransaction
+    Connection = Conexao
+    Left = 448
+    Top = 32
   end
 end

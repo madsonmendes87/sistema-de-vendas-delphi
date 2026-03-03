@@ -53,10 +53,6 @@ begin
     finally
         FreeAndNil(formCidades);
     end;
-
-
-//    application.CreateForm(TformCidades, formCidades);
-//    formCidades.ShowModal;
 end;
 
 end.

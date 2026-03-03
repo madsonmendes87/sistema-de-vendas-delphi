@@ -4,8 +4,8 @@ object formCidades: TformCidades
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Cidades Buscar'
-  ClientHeight = 403
-  ClientWidth = 658
+  ClientHeight = 461
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -25,7 +25,7 @@ object formCidades: TformCidades
   object editSearch: TEdit
     Left = 8
     Top = 29
-    Width = 642
+    Width = 768
     Height = 23
     CharCase = ecUpperCase
     ParentShowHint = False
@@ -37,8 +37,8 @@ object formCidades: TformCidades
   object gridCidades: TDBGrid
     Left = 8
     Top = 69
-    Width = 642
-    Height = 291
+    Width = 768
+    Height = 353
     Align = alCustom
     DataSource = dmCidades.dsCidadeBusca
     Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -50,8 +50,8 @@ object formCidades: TformCidades
     TitleFont.Style = []
   end
   object btnCadastrar: TBitBtn
-    Left = 332
-    Top = 370
+    Left = 458
+    Top = 428
     Width = 75
     Height = 25
     Caption = 'Cadastrar'
@@ -59,8 +59,8 @@ object formCidades: TformCidades
     OnClick = btnCadastrarClick
   end
   object btnAlterar: TBitBtn
-    Left = 413
-    Top = 370
+    Left = 539
+    Top = 428
     Width = 75
     Height = 25
     Caption = 'Alterar'
@@ -68,8 +68,8 @@ object formCidades: TformCidades
     OnClick = btnAlterarClick
   end
   object btnUtilizar: TBitBtn
-    Left = 494
-    Top = 370
+    Left = 620
+    Top = 428
     Width = 75
     Height = 25
     Caption = 'Utilizar'
@@ -77,8 +77,8 @@ object formCidades: TformCidades
     OnClick = btnUtilizarClick
   end
   object btnFechar: TBitBtn
-    Left = 575
-    Top = 370
+    Left = 701
+    Top = 428
     Width = 75
     Height = 25
     Caption = 'Fechar'
