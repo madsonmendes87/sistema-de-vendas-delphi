@@ -42,7 +42,7 @@ implementation
 
 {$R *.dfm}
 
-uses unitDMConexao, unitPrincipal;
+uses unitDMConexao;
 
 procedure TformCadastrarCidades.btnGravarClick(Sender: TObject);
 begin
@@ -55,47 +55,14 @@ begin
 
     if DBLookUF.KeyValue = Null then
     begin
-        DBLookUF.SetFocus;
         Application.MessageBox('Selecione um estado!','Cadastrar Cidades',MB_OK + MB_ICONINFORMATION);
         exit;
     end;
 
     if(Trim(editIBGE.Text).IsEmpty) then
     begin
-        editIBGE.SetFocus;
         Application.MessageBox('Campo Codigo do IBGE está vazio','Cadastrar Cidades',MB_OK + MB_ICONINFORMATION);
         exit;
-    end;
-
-    ShowMessage('Inserir cidade');
-    try
-        formPrincipal.IniciaTransacao;
-
-        with qryInsereCidades do
-        begin
-            Close;
-            SQL.Clear;
-            SQL.Add('INSERT INTO cidades(');
-            SQL.Add('   NOME, UF, CODIGO_IBGE)');
-            SQL.Add('VALUES(');
-            SQL.Add('   :nome, :estado, :ibge)');
-
-            ParamByName('nome').AsString    :=editNome.Text;
-            ParamByName('estado').AsString  :=qryComboUF.FieldByName('SIGLA').Value;
-            ParamByName('ibge').AsInteger   :=StrToInt(editIBGE.Text);
-            ExecSQL;
-        end;
-
-        formPrincipal.ComitaTransacao;
-        Application.MessageBox('Cidade inserida com sucesso!','Cadastrar Cidades',MB_OK + MB_ICONINFORMATION);
-
-    except
-        on E: exception do
-        begin
-             formPrincipal.DesfazTransacao;
-             Application.MessageBox(pchar('Erro ao inserir cidades! '+E.Message),'Erro', MB_ICONERROR);
-             exit;
-        end;
     end;
 end;
 
@@ -107,8 +74,6 @@ end;
 procedure TformCadastrarCidades.FormShow(Sender: TObject);
 begin
     qryComboUF.Active   :=true;
-
-    editNome.SetFocus;
 
 end;
 

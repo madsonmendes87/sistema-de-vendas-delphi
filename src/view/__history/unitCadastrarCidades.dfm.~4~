@@ -43,7 +43,7 @@ object formCadastrarCidades: TformCadastrarCidades
     Caption = 'Codigo IBGE'
   end
   object btnResetarUF: TSpeedButton
-    Left = 95
+    Left = 103
     Top = 157
     Width = 18
     Height = 23
@@ -63,7 +63,6 @@ object formCadastrarCidades: TformCadastrarCidades
     Width = 121
     Height = 23
     Color = clSeashell
-    ReadOnly = True
     TabOrder = 0
   end
   object editNome: TEdit
@@ -71,20 +70,19 @@ object formCadastrarCidades: TformCadastrarCidades
     Top = 101
     Width = 377
     Height = 23
-    CharCase = ecUpperCase
     Color = clWhitesmoke
+    ReadOnly = True
     TabOrder = 1
   end
-  object editIBGE: TEdit
+  object Edit3: TEdit
     Left = 24
     Top = 213
     Width = 121
     Height = 23
-    CharCase = ecUpperCase
     TabOrder = 3
   end
   object DBLookUF: TDBLookupComboBox
-    Left = 24
+    Left = 32
     Top = 157
     Width = 73
     Height = 23
@@ -237,10 +235,5 @@ object formCadastrarCidades: TformCadastrarCidades
     DataSet = qryComboUF
     Left = 720
     Top = 16
-  end
-  object qryInsereCidades: TFDQuery
-    Connection = dmConexao.Conexao
-    Left = 640
-    Top = 80
   end
 end

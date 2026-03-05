@@ -81,7 +81,7 @@ begin
             SQL.Add('   :nome, :estado, :ibge)');
 
             ParamByName('nome').AsString    :=editNome.Text;
-            ParamByName('estado').AsString  :=qryComboUF.FieldByName('SIGLA').Value;
+            ParamByName('estado').AsString  :=DBLookUF.ListField;
             ParamByName('ibge').AsInteger   :=StrToInt(editIBGE.Text);
             ExecSQL;
         end;
@@ -93,7 +93,7 @@ begin
         on E: exception do
         begin
              formPrincipal.DesfazTransacao;
-             Application.MessageBox(pchar('Erro ao inserir cidades! '+E.Message),'Erro', MB_ICONERROR);
+             Application.MessageBox(pchar('Erro ao inserir real cortado! '+E.Message),'Erro', MB_ICONERROR);
              exit;
         end;
     end;
