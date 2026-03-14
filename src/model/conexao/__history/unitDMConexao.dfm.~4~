@@ -7,6 +7,7 @@ object dmConexao: TdmConexao
       'User_Name=sysdba'
       'Password=masterkey'
       'DriverID=FB')
+    Connected = True
     LoginPrompt = False
     Transaction = FDTransacao
     Left = 64

@@ -225,7 +225,6 @@ object formCadastrarCidades: TformCadastrarCidades
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
     TabOrder = 5
-    OnClick = btnCancelarClick
   end
   object qryComboUF: TFDQuery
     Connection = dmConexao.Conexao

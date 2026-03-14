@@ -29,7 +29,6 @@ type
     procedure btnGravarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btnResetarUFClick(Sender: TObject);
-    procedure btnCancelarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,11 +43,6 @@ implementation
 {$R *.dfm}
 
 uses unitDMConexao, unitPrincipal;
-
-procedure TformCadastrarCidades.btnCancelarClick(Sender: TObject);
-begin
-    Close;
-end;
 
 procedure TformCadastrarCidades.btnGravarClick(Sender: TObject);
 begin
